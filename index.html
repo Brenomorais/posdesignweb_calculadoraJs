@@ -17,19 +17,21 @@
 
         <form id="formulario">
 
-            <label>Número 01:</label>
-            <input type="text" id="tNum1" placeholder="Digite o primeiro número." size="20" maxlength="20" /> <br /><br />
+            <label for="tNum1">Número 01:</label>
+            <input type="text" id="tNum1" placeholder="Digite o primeiro número." size="20" maxlength="20" onkeypress="onlyNumbers(event);" />
+            <br /><br />
 
-            <label>Número 02:</label>
-            <input type="text" id="tNum1" placeholder="Digite o segundo número." size="20" maxlength="20" /> <br/><br />
+            <label for="tNum2">Número 02:</label>
+            <input type="text" id="tNum2" placeholder="Digite o segundo número." size="20" maxlength="20" onkeypress="onlyNumbers(event);" />
+            <br/><br />
 
-            <input type="button" class="soma" value="Somar" />
+            <input type="button" class="soma" value="Somar" onclick="calculo('tNum1','tNum2','+');" />
 
-            <input type="button" class="subtrair" value="Subtrair" />
+            <input type="button" class="subtrair" value="Subtrair" onclick="calculo('tNum1','tNum2','-');" />
 
-            <input type="button" class="multiplicar" value="Multiplicar" />
+            <input type="button" class="multiplicar" value="Multiplicar" onclick="calculo('tNum1','tNum2','x');" />
 
-            <input type="button" class="dividir" value="Dividir" />
+            <input type="button" class="dividir" value="Dividir" onclick="calculo('tNum1','tNum2','/');" />
 
             <label id="res"></label>
 
